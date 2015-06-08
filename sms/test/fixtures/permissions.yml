@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perm_name: MyString
+  perm_code: MyString
+
+two:
+  perm_name: MyString
+  perm_code: MyString
