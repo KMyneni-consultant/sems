@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sms</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
 
-<%= yield %>
+    <!-- Bootstrap Core CSS -->
+    <link href="../btemp/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</body>
+    <!-- MetisMenu CSS -->
+    <link href="../btemp/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../btemp/dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../btemp/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../btemp/bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../btemp/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <div id="wrapper">
+    <%= render 'layouts/header' %>
+
+    <div class="container">
+
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+       
+      <%= yield %>
+
+      <%= render 'layouts/footer' %>
+
+      <%= debug(params) if Rails.env.development? %>
+
+    </div>
+    </div>
+  </body>
 </html>

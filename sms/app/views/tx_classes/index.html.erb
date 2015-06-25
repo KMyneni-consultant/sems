@@ -1,0 +1,33 @@
+<h1>Listing tx_classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cid</th>
+      <th>Class name</th>
+      <th>Fid</th>
+      <th>Pid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tx_classes.each do |tx_class| %>
+      <tr>
+        <td><%= tx_class.cid %></td>
+        <td><%= tx_class.class_name %></td>
+        <td><%= tx_class.fid %></td>
+        <td><%= tx_class.pid %></td>
+        <td><%= link_to 'Show', tx_class %></td>
+        <td><%= link_to 'Edit', edit_tx_class_path(tx_class) %></td>
+        <td><%= link_to 'Destroy', tx_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tx class', new_tx_class_path %>

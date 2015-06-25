@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rid:</strong>
+  <%= @role_facility.rid %>
+</p>
+
+<p>
+  <strong>Fid:</strong>
+  <%= @role_facility.fid %>
+</p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @role_facility.pid %>
+</p>
+
+<p>
+  <strong>Role name:</strong>
+  <%= @role_facility.role_name %>
+</p>
+
+<%= link_to 'Edit', edit_role_facility_path(@role_facility) %> |
+<%= link_to 'Back', role_facilities_path %>

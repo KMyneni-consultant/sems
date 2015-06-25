@@ -1,0 +1,33 @@
+<h1>Listing atfcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cid</th>
+      <th>Description</th>
+      <th>Bundle</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atfcs.each do |atfc| %>
+      <tr>
+        <td><%= atfc.cid %></td>
+        <td><%= atfc.description %></td>
+        <td><%= atfc.bundle %></td>
+        <td><%= atfc.status %></td>
+        <td><%= link_to 'Show', atfc %></td>
+        <td><%= link_to 'Edit', edit_atfc_path(atfc) %></td>
+        <td><%= link_to 'Destroy', atfc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Atfc', new_atfc_path %>

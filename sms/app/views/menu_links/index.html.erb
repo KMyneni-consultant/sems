@@ -1,0 +1,31 @@
+<h1>Listing menu_links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lid</th>
+      <th>Linkname</th>
+      <th>Bundle</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menu_links.each do |menu_link| %>
+      <tr>
+        <td><%= menu_link.lid %></td>
+        <td><%= menu_link.linkname %></td>
+        <td><%= menu_link.bundle %></td>
+        <td><%= link_to 'Show', menu_link %></td>
+        <td><%= link_to 'Edit', edit_menu_link_path(menu_link) %></td>
+        <td><%= link_to 'Destroy', menu_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Menu link', new_menu_link_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@atfc) do |f| %>
+  <% if @atfc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@atfc.errors.count, "error") %> prohibited this atfc from being saved:</h2>
+
+      <ul>
+      <% @atfc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cid %><br>
+    <%= f.number_field :cid %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :bundle %><br>
+    <%= f.text_field :bundle %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

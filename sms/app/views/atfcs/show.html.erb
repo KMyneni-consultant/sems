@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @atfc.cid %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @atfc.description %>
+</p>
+
+<p>
+  <strong>Bundle:</strong>
+  <%= @atfc.bundle %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @atfc.status %>
+</p>
+
+<%= link_to 'Edit', edit_atfc_path(@atfc) %> |
+<%= link_to 'Back', atfcs_path %>

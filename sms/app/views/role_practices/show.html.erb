@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rid:</strong>
+  <%= @role_practice.rid %>
+</p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @role_practice.pid %>
+</p>
+
+<p>
+  <strong>Role name:</strong>
+  <%= @role_practice.role_name %>
+</p>
+
+<%= link_to 'Edit', edit_role_practice_path(@role_practice) %> |
+<%= link_to 'Back', role_practices_path %>

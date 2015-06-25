@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mid:</strong>
+  <%= @menu.mid %>
+</p>
+
+<p>
+  <strong>Menuname:</strong>
+  <%= @menu.menuname %>
+</p>
+
+<p>
+  <strong>Bundle:</strong>
+  <%= @menu.bundle %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

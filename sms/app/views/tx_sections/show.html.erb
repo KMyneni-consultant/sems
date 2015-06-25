@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sid:</strong>
+  <%= @tx_section.sid %>
+</p>
+
+<p>
+  <strong>Section name:</strong>
+  <%= @tx_section.section_name %>
+</p>
+
+<p>
+  <strong>Fid:</strong>
+  <%= @tx_section.fid %>
+</p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @tx_section.pid %>
+</p>
+
+<%= link_to 'Edit', edit_tx_section_path(@tx_section) %> |
+<%= link_to 'Back', tx_sections_path %>

@@ -1,0 +1,16 @@
+<% if isadmin? %>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Admin <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Admin Panel", admin_path %></li>
+                  <li><%= link_to "Role", roles_path %></li>
+                  <li><%= link_to "Practice Role", proles_path %></li>
+                  <li><%= link_to "Facility Role", froles_path %></li>
+                  <li><%= link_to "Practice", practices_path %></li>
+                  <li><%= link_to "Facility", facilities_path %></li>
+                </ul>
+             </li>
+ <% else %>
+ <% end %>

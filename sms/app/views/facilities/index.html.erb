@@ -1,0 +1,32 @@
+<h1>Listing facilities</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Fid</th>
+      <th>Pid</th>
+      <th>Facility name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facilities.each do |facility| %>
+      <tr>
+        <td><%= facility.fid %></td>
+        <td><%= facility.pid %></td>
+        <td><%= facility.facility_name %></td>
+        <td><%= link_to 'Show', facility %></td>
+        <td><%= link_to 'Edit', edit_facility_path(facility) %></td>
+        <td><%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '<button type="button" class="btn btn-primary">New Facility</button>'.html_safe, new_facility_path %>

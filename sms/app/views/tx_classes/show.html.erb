@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @tx_class.cid %>
+</p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @tx_class.class_name %>
+</p>
+
+<p>
+  <strong>Fid:</strong>
+  <%= @tx_class.fid %>
+</p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @tx_class.pid %>
+</p>
+
+<%= link_to 'Edit', edit_tx_class_path(@tx_class) %> |
+<%= link_to 'Back', tx_classes_path %>

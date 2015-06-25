@@ -1,0 +1,31 @@
+<h1>Listing role_practices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rid</th>
+      <th>Pid</th>
+      <th>Role name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @role_practices.each do |role_practice| %>
+      <tr>
+        <td><%= role_practice.rid %></td>
+        <td><%= role_practice.pid %></td>
+        <td><%= role_practice.role_name %></td>
+        <td><%= link_to 'Show', role_practice %></td>
+        <td><%= link_to 'Edit', edit_role_practice_path(role_practice) %></td>
+        <td><%= link_to 'Destroy', role_practice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Role practice', new_role_practice_path %>

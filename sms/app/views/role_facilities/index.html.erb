@@ -1,0 +1,33 @@
+<h1>Listing role_facilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rid</th>
+      <th>Fid</th>
+      <th>Pid</th>
+      <th>Role name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @role_facilities.each do |role_facility| %>
+      <tr>
+        <td><%= role_facility.rid %></td>
+        <td><%= role_facility.fid %></td>
+        <td><%= role_facility.pid %></td>
+        <td><%= role_facility.role_name %></td>
+        <td><%= link_to 'Show', role_facility %></td>
+        <td><%= link_to 'Edit', edit_role_facility_path(role_facility) %></td>
+        <td><%= link_to 'Destroy', role_facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Role facility', new_role_facility_path %>

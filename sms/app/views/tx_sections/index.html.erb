@@ -1,0 +1,33 @@
+<h1>Listing tx_sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sid</th>
+      <th>Section name</th>
+      <th>Fid</th>
+      <th>Pid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tx_sections.each do |tx_section| %>
+      <tr>
+        <td><%= tx_section.sid %></td>
+        <td><%= tx_section.section_name %></td>
+        <td><%= tx_section.fid %></td>
+        <td><%= tx_section.pid %></td>
+        <td><%= link_to 'Show', tx_section %></td>
+        <td><%= link_to 'Edit', edit_tx_section_path(tx_section) %></td>
+        <td><%= link_to 'Destroy', tx_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tx section', new_tx_section_path %>

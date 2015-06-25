@@ -1,0 +1,33 @@
+<%= form_for(@tx_class) do |f| %>
+  <% if @tx_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tx_class.errors.count, "error") %> prohibited this tx_class from being saved:</h2>
+
+      <ul>
+      <% @tx_class.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cid %><br>
+    <%= f.text_field :cid %>
+  </div>
+  <div class="field">
+    <%= f.label :class_name %><br>
+    <%= f.text_field :class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :fid %><br>
+    <%= f.text_field :fid %>
+  </div>
+  <div class="field">
+    <%= f.label :pid %><br>
+    <%= f.text_field :pid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
