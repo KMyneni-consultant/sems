@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  resources :ftfscs
+
+  resources :ftfcs
+
   resources :atfscs
 
   resources :atfcs
@@ -46,5 +50,8 @@ SampleApp::Application.routes.draw do
   match '/roles', to: 'roles#index', via: 'get'
   match '/proles', to: 'role_practices#index', via: 'get'
   match '/froles', to: 'role_facilities#index', via: 'get'
+  match '/two_field_category', to: 'atfcs#index', via: 'get'
+  match '/two_field_subcategory', to: 'atfscs#index', via: 'get'
+
 
 end

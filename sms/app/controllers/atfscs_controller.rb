@@ -1,4 +1,5 @@
 class AtfscsController < ApplicationController
+  before_action :signed_in_user, only: [:show, :edit, :update, :destroy, :index]
   before_action :set_atfsc, only: [:show, :edit, :update, :destroy]
 
   # GET /atfscs
@@ -15,10 +16,12 @@ class AtfscsController < ApplicationController
   # GET /atfscs/new
   def new
     @atfsc = Atfsc.new
+    @atfcs = Atfc.all
   end
 
   # GET /atfscs/1/edit
   def edit
+    @atfcs = Atfc.all
   end
 
   # POST /atfscs

@@ -1,5 +1,41 @@
 <h1>New atfsc</h1>
 
-<%= render 'form' %>
+<%#= render 'form' %>
+
+<h1>New atfsc</h1>
+
+<form accept-charset="UTF-8" action="/atfscs" class="new_atfsc" id="new_atfsc" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="a891wM4CH/VpFDUGIfKJFMYO+vZ0YOk2L7C1bfOUzNQ=" /></div>
+
+ 
+   <div class="field">
+    <label for="atfsc_cid">Cid</label><br>
+     
+     <%= select_tag 'atfsc[cid]', options_from_collection_for_select(@atfcs, 'cid', 'description') %>
+  </div>
+
+
+  <div class="field">
+    <label for="atfsc_scid">Scid</label><br>
+    <input id="atfsc_scid" name="atfsc[scid]" type="number" />
+  </div>
+  <div class="field">
+    <label for="atfsc_description">Description</label><br>
+    <input id="atfsc_description" name="atfsc[description]" type="text" />
+  </div>
+  <div class="field">
+    <label for="atfsc_bundle">Bundle</label><br>
+    <input id="atfsc_bundle" name="atfsc[bundle]" type="text" />
+  </div>
+  <div class="field">
+    <label for="atfsc_status">Status</label><br>
+    <input id="atfsc_status" name="atfsc[status]" type="number" />
+  </div>
+  <div class="actions">
+    <input name="commit" type="submit" value="Create Atfsc" />
+  </div>
+</form>
+
+
+
 
 <%= link_to 'Back', atfscs_path %>

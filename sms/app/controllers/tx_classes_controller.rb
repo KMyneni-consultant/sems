@@ -1,4 +1,5 @@
 class TxClassesController < ApplicationController
+  before_action :signed_in_user, only: [:show, :edit, :update, :destroy, :index]
   before_action :set_tx_class, only: [:show, :edit, :update, :destroy]
 
   # GET /tx_classes

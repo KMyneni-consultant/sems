@@ -1,6 +1,58 @@
 <h1>Editing atfsc</h1>
 
-<%= render 'form' %>
+<%#= render 'form' %>
+
+
+
+<form accept-charset="UTF-8" action='/atfscs/'+atfsc[status] class="edit_atfsc" id="edit_atfsc_1" method="post">
+
+<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+
+<input name="_method" type="hidden" value="patch" />
+
+<input name="authenticity_token" type="hidden" value="yhjoUzGn0EuwSqj2T6oiF/RD7//ne4L/SP19Vts4+BE=" /></div>
+
+  <div class="field">
+    <label for="atfsc_cid">Cid</label><br>
+    <input id="atfsc_cid" name="atfsc[cid]" type="number" value="1" />
+  </div>
+
+
+<div class="field">
+    <label for="atfsc_cid">Cid</label><br>
+     <select class="form-control" id="atfsc_cid" name="atfsc[cid]">
+        
+     <% @atfcs.each do |atfc| %>
+       <option><%= atfc.cid %></option><%= atfc.description %>
+     <% end %>
+
+     </select>
+
+  </div>
+
+
+
+  <div class="field">
+    <label for="atfsc_scid">Scid</label><br>
+    <input id="atfsc_scid" name="atfsc[scid]" type="number"  />
+  </div>
+  <div class="field">
+    <label for="atfsc_description">Description</label><br>
+    <input id="atfsc_description" name="atfsc[description]" type="text"  />
+  </div>
+  <div class="field">
+    <label for="atfsc_bundle">Bundle</label><br>
+    <input id="atfsc_bundle" name="atfsc[bundle]" type="text"   />
+  </div>
+  <div class="field">
+    <label for="atfsc_status">Status</label><br>
+    <input id="atfsc_status" name="atfsc[status]" type="number"   />
+  </div>
+  <div class="actions">
+    <input name="commit" type="submit" value="Update Atfsc" />
+  </div>
+</form>
+
 
 <%= link_to 'Show', @atfsc %> |
 <%= link_to 'Back', atfscs_path %>

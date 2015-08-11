@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625053340) do
+ActiveRecord::Schema.define(version: 20150627013013) do
 
   create_table "atfcs", force: true do |t|
     t.integer  "cid"
@@ -36,6 +36,23 @@ ActiveRecord::Schema.define(version: 20150625053340) do
     t.string   "fid"
     t.string   "pid"
     t.string   "facility_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ftfcs", force: true do |t|
+    t.string   "cid"
+    t.string   "description"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ftfscs", force: true do |t|
+    t.string   "ftfc_id"
+    t.string   "scid"
+    t.string   "description"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
