@@ -1,0 +1,33 @@
+<h1>Listing ftfscs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ftfc</th>
+      <th>Scid</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ftfscs.each do |ftfsc| %>
+      <tr>
+        <td><%= ftfsc.ftfc_id %></td>
+        <td><%= ftfsc.scid %></td>
+        <td><%= ftfsc.description %></td>
+        <td><%= ftfsc.status %></td>
+        <td><%= link_to 'Show', ftfsc %></td>
+        <td><%= link_to 'Edit', edit_ftfsc_path(ftfsc) %></td>
+        <td><%= link_to 'Destroy', ftfsc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ftfsc', new_ftfsc_path %>

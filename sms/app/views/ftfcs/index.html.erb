@@ -1,0 +1,31 @@
+<h1>Listing ftfcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cid</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ftfcs.each do |ftfc| %>
+      <tr>
+        <td><%= ftfc.cid %></td>
+        <td><%= ftfc.description %></td>
+        <td><%= ftfc.status %></td>
+        <td><%= link_to 'Show', ftfc %></td>
+        <td><%= link_to 'Edit', edit_ftfc_path(ftfc) %></td>
+        <td><%= link_to 'Destroy', ftfc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ftfc', new_ftfc_path %>

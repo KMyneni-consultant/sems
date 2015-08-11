@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @ftfc.cid %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ftfc.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @ftfc.status %>
+</p>
+
+<%= link_to 'Edit', edit_ftfc_path(@ftfc) %> |
+<%= link_to 'Back', ftfcs_path %>

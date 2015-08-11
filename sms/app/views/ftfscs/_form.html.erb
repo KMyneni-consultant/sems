@@ -1,0 +1,33 @@
+<%= form_for(@ftfsc) do |f| %>
+  <% if @ftfsc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ftfsc.errors.count, "error") %> prohibited this ftfsc from being saved:</h2>
+
+      <ul>
+      <% @ftfsc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ftfc_id %><br>
+    <%= f.text_field :ftfc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :scid %><br>
+    <%= f.text_field :scid %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
